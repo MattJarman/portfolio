@@ -45,6 +45,10 @@ export default {
       ]
     }
   },
+  created () {
+    this.theme = this.$store.getters.theme
+    console.log(this.theme)
+  },
   mounted () {
     this.theme = this.$store.getters.theme
     console.log(this.theme)
