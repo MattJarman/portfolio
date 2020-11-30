@@ -1,8 +1,7 @@
 module.exports = {
   siteName: 'Matthew Jarman',
   titleTemplate: '%s | Matthew Jarman',
-  siteUrl: 'https://MattJarman.github.io',
-  pathPrefix: '/portfolio',
+  siteUrl: 'https://www.mattjarman.me',
   plugins: [
     {
       use: 'gridsome-plugin-tailwindcss'
