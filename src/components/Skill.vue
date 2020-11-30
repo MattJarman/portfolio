@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-col items-center justify-center w-24 mx-auto md:w-56">
+  <div class="flex flex-col items-center justify-center mx-auto w-1/3 md:w-1/4">
     <div class="flex items-center justify-center w-10 h-10 mb-4 sm:w-16 sm:h-16 lg:w-20 lg:h-20">
       <g-image
           class="transition duration-300 ease-in-out transform outline-none cursor-pointer md:grayscale hover:full-colour focus:outline-none hover:-translate-y-1 hover:scale-105"
-          :src="`uploads/icons/${icon}.svg`"
+          :src="require(`!!assets-loader!@icons/${icon}.svg`)"
           :alt="icon"
       />
     </div>

@@ -1,12 +1,12 @@
 <template>
   <div class="rounded-md overflow-hidden shadow-md bg-white dark:bg-prussian-blue">
     <g-image
-        :src="imageUrl"
+        :src="require(`!!assets-loader!@images/${imageUrl}`)"
         :alt="title"
         className="w-full"
     />
     <div class="px-6 py-4 max-h-lg min-h-32 lg:min-h-64">
-      <p class="font-bold text-2xl mb-2 sm:text-4xl dark:text-green-400">
+      <p class="font-bold text-2xl mb-2 sm:text-4xl text-green-500 dark:text-green-400">
         {{ title }}
       </p>
       <div class="description text-gray-700 text-xs md:text-sm dark:text-gray-200" v-html="description"></div>

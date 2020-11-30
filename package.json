@@ -32,6 +32,7 @@
     "gridsome-plugin-tailwindcss": "^4.1.0",
     "js-yaml": "^3.14.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.1",
+    "vue-clickaway": "^2.2.2",
     "vue-svg-loader": "^0.16.0"
   }
 }

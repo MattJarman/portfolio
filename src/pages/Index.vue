@@ -50,7 +50,7 @@
           <div class="flex items-center justify-center flex-grow w-full lg:ml-24">
             <g-image
                 class="w-1/2 h-auto mx-8 my-4 mb-8 rounded-full shadow-md sm:mx-16 md:w-72 md:h-72 lg:mb-0"
-                src="/uploads/me.jpg"
+                :src="require('!!assets-loader!@images/me.jpg')"
                 alt="Me"
             />
           </div>

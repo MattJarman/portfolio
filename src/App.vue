@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="min-h-full dark:bg-rich-black">
+  <div id="app" class="min-h-full">
     <header id="nav">
       <navbar/>
     </header>
@@ -72,7 +72,7 @@ export default {
 <style>
 html, body {
   scroll-behavior: smooth;
-  @apply h-full;
+  @apply h-full  dark:bg-rich-black;
 }
 
 #app {

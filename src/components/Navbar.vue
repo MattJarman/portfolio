@@ -50,8 +50,10 @@
 
           </nav>
           <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <!-- TODO: Add github link -->
-            <theme-switcher class="w-8 h-8 text-gray-400 hover:text-gray-500 dark:text-green-400"/>
+            <a href="https://github.com/MattJarman" target="_blank" class="flex items-center justify-center mr-3">
+              <font-awesome-icon class="w-7 h-7 text-2xl text-gray-400 hover:text-gray-500 dark:text-green-400 dark:hover:text-green-500" :icon="['fab', 'github']"/>
+            </a>
+            <theme-switcher class="w-7 h-7 text-gray-400 hover:text-gray-500 dark:text-green-400 dark:hover:text-green-500"/>
           </div>
         </div>
       </div>
@@ -65,6 +67,7 @@
       >
         <div
             v-show="this.isMenuOpen"
+            v-on-clickaway.native="hideMenu"
             class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50"
         >
           <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white dark:bg-rich-black divide-y-2 divide-gray-50 dark:divide-prussian-blue">
@@ -123,6 +126,9 @@
             </div>
             <div class="py-4 px-5">
               <div class="flex items-center justify-end">
+                <a href="https://github.com/MattJarman" target="_blank" class="flex items-center justify-center mr-3">
+                  <font-awesome-icon class="w-6 h-6 text-2xl text-gray-400 hover:text-gray-500 dark:text-green-400 dark:hover:text-green-500" :icon="['fab', 'github']"/>
+                </a>
                 <theme-switcher class="w-6 h-6 text-gray-400 hover:text-gray-500 dark:text-green-400"/>
               </div>
             </div>
@@ -135,8 +141,11 @@
 
 <script>
 import ThemeSwitcher from './ThemeSwitcher'
+import { mixin as clickaway } from 'vue-clickaway'
+
 export default {
   name: 'Navbar',
+  mixins: [clickaway],
   components: { ThemeSwitcher },
   data () {
     return {
