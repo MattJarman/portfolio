@@ -140,8 +140,7 @@ export default {
   components: { ThemeSwitcher },
   data () {
     return {
-      isMenuOpen: false,
-      theme: ''
+      isMenuOpen: false
     }
   },
   methods: {
@@ -154,10 +153,6 @@ export default {
     },
     toggleMenu () {
       this.isMenuOpen = !this.isMenuOpen
-    },
-    updateTheme (theme) {
-      document.getElementById('app').className = theme
-      this.theme = theme
     }
   }
 }
