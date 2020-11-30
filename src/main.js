@@ -15,20 +15,16 @@ export default function (Vue, { router, head, isClient, appOptions }) {
 
   Vue.use(Vuex)
 
-  let theme = 'light'
-  if (process.isClient) {
-    theme = localStorage.getItem('theme') || 'light'
-  }
-
   appOptions.store = new Vuex.Store({
     state: {
-      theme: theme
+      theme: process.isClient
+        ? localStorage.getItem('theme')
+        : 'light'
     },
     mutations: {
       toggleTheme (state) {
-        state.theme = state.theme === 'dark' ? 'light' : 'dark'
-
         if (process.isClient) {
+          state.theme = state.theme === 'dark' ? 'light' : 'dark'
           localStorage.setItem('theme', state.theme)
         }
       }
