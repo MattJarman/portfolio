@@ -44,9 +44,11 @@ export default {
       ]
     }
   },
+  mounted () {
+    this.theme = this.$store.getters.theme
+  },
   computed: {
     theme () {
-      console.log(this.$store.getters.theme)
       return this.$store.getters.theme
     }
   },
