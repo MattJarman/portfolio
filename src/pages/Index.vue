@@ -141,9 +141,6 @@ export default {
     scrollToTop () {
       if (process.isClient) {
         document.body.scrollTop = document.documentElement.scrollTop = 0
-
-        // Removes any hashtag routes from the URL
-        history.pushState('', document.title, window.location.pathname)
       }
     },
     scrollTo (id) {

@@ -1,7 +1,7 @@
 <template>
-  <main class="flex-grow">
+  <div class="flex-grow">
     <slot/>
-  </main>
+  </div>
 </template>
 
 <static-query>

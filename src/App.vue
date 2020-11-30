@@ -4,7 +4,7 @@
       <navbar/>
     </header>
     <main class="">
-      <transition :name="this.transitionName" mode="out-in" appear>
+      <transition :name="this.transitionName" mode="out-in">
           <router-view />
       </transition>
     </main>
@@ -70,15 +70,6 @@ export default {
 </script>
 
 <style>
-html, body {
-  scroll-behavior: smooth;
-  @apply h-full  dark:bg-rich-black;
-}
-
-#app {
-  overflow-x: hidden;
-}
-
 .slide-left-leave-active,
 .slide-left-enter-active {
   transition: 0.1s;

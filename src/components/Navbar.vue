@@ -1,9 +1,9 @@
 <template>
   <nav>
-    <div class="relative dark:bg-rich-black">
+    <div class="relative transition-colors duration-300">
       <div class="w-full mx-auto">
         <div
-            class="flex justify-between items-center border-b-2 border-gray-100 dark:border-prussian-blue py-4 md:justify-start md:space-x-10 px-4">
+            class="flex justify-between items-center border-b-2 border-gray-100 dark:border-prussian-blue transition-colors duration-300 py-4 md:justify-start md:space-x-10 px-4">
           <div class="flex lg:w-0 mr-6">
             <g-link to="/">
               <span class="sr-only">Home</span>
@@ -70,7 +70,7 @@
             v-on-clickaway.native="hideMenu"
             class="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden z-50"
         >
-          <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white dark:bg-rich-black divide-y-2 divide-gray-50 dark:divide-prussian-blue">
+          <div class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white transition-colors duration-300 dark:bg-rich-black divide-y-2 divide-gray-50 dark:divide-prussian-blue">
             <div class="pt-5 pb-6 px-5">
               <div class="flex items-center justify-between">
                 <g-link to="/">
@@ -83,7 +83,7 @@
                 </g-link>
                 <div class="-mr-2">
                   <button type="button" @click="toggleMenu"
-                          class="bg-white dark:bg-rich-black rounded-md p-2 inline-flex items-center justify-center text-gray-400 dark:text-gray-200 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-400">
+                          class="bg-white dark:bg-rich-black transition-colors duration-300 rounded-md p-2 inline-flex items-center justify-center text-gray-400 dark:text-gray-200 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-400">
                     <span class="sr-only">Close menu</span>
                     <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                          stroke="currentColor" aria-hidden="true">

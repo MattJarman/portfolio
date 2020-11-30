@@ -1,5 +1,5 @@
 <template>
-  <div class="rounded-md overflow-hidden shadow-md bg-white dark:bg-prussian-blue">
+  <div class="rounded-md overflow-hidden shadow-md bg-white dark:bg-prussian-blue transition-colors duration-300">
     <g-image
         :src="require(`!!assets-loader!@images/${imageUrl}`)"
         :alt="title"
