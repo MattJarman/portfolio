@@ -26,7 +26,8 @@ export default {
   name: 'App',
   data () {
     return {
-      transitionName: 'slide-left'
+      transitionName: 'slide-left',
+      theme: this.$store.getters.theme
     }
   },
   components: {
@@ -46,17 +47,16 @@ export default {
   },
   mounted () {
     this.theme = this.$store.getters.theme
-  },
-  computed: {
-    theme () {
-      return this.$store.getters.theme
-    }
+    console.log(this.theme)
   },
   watch: {
     $route (to, from) {
       const toDepth = to.path.slice('/').length
       const fromDepth = from.path.split('/').length
       this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
+    },
+    '$store.state.theme' (newValue) {
+      this.theme = newValue
     }
   }
 }
