@@ -1,14 +1,16 @@
 import Vuex from 'vuex'
-import { library } from '@fortawesome/fontawesome-svg-core'
+import { library, config } from '@fortawesome/fontawesome-svg-core'
 import { faUser, faSun, faMoon } from '@fortawesome/free-regular-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import DefaultLayout from '~/layouts/Default.vue'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 import './tailwind.css'
 
 export default function (Vue, { router, head, isClient, appOptions }) {
   library.add(faUser, faGithub, faAngleDown, faAngleUp, faSun, faMoon)
+  config.autoAddCss = false
 
   Vue.component('font-awesome-icon', FontAwesomeIcon)
   Vue.component('Layout', DefaultLayout)

@@ -1,9 +1,9 @@
 <template>
-  <div id="app" class="min-h-full" :class="theme">
+  <div id="app" class="min-h-full dark:bg-rich-black">
     <header id="nav">
       <navbar/>
     </header>
-    <main class="dark:bg-rich-black">
+    <main class="">
       <transition :name="this.transitionName" mode="out-in" appear>
           <router-view />
       </transition>
@@ -26,8 +26,7 @@ export default {
   name: 'App',
   data () {
     return {
-      transitionName: 'slide-left',
-      theme: this.$store.getters.theme
+      transitionName: 'slide-left'
     }
   },
   components: {
@@ -45,13 +44,17 @@ export default {
       ]
     }
   },
-  created () {
-    this.theme = this.$store.getters.theme
-    console.log(this.theme)
-  },
   mounted () {
-    this.theme = this.$store.getters.theme
-    console.log(this.theme)
+    // I'd prefer to use a computed value for the theme directly, but that doesn't seem
+    // to work on initial load.
+    this.setTheme(this.$store.getters.theme)
+  },
+  methods: {
+    setTheme (theme) {
+      if (process.isClient) {
+        document.documentElement.className = theme
+      }
+    }
   },
   watch: {
     $route (to, from) {
@@ -60,7 +63,7 @@ export default {
       this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left'
     },
     '$store.state.theme' (newValue) {
-      this.theme = newValue
+      this.setTheme(newValue)
     }
   }
 }
