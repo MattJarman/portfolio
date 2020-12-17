@@ -1,14 +1,36 @@
-# Default starter for Gridsome
+# Portfolio
 
-This is the project you get when you run `gridsome create new-project`.
+This website was made using [Gridsome](https://gridsome.org/) and [TailwindCSS](https://tailwindcss.com/).
 
-### 1. Install Gridsome CLI tool if you don't have
+## Development
 
-`npm install --global @gridsome/cli`
+To run this project, you'll need [Git](https://git-scm.com/downloads) and [Node.js](https://nodejs.org/en/).
 
-### 2. Create a Gridsome project
+### 1. Clone the project and CMS
+```s
+$ git clone https://github.com/MattJarman/portfolio.git
+```
 
-1. `gridsome create my-gridsome-site` to install default starter
-2. `cd my-gridsome-site` to open the folder
-3. `gridsome develop` to start a local dev server at `http://localhost:8080`
-4. Happy coding 🎉🙌
+### 2. Set up the website
+```
+$ cd ../portfolio
+$ npm i
+```
+
+### 3. Run the website
+```
+$ npm run develop
+```
+If everything went well, you should see somethign similar to the following message:
+```
+ DONE  Compiled successfully in 10ms  
+
+
+  Site running at:                                         
+  - Local:                 http://localhost:8080/ 
+  - Network:               http://192.168.0.32:8080/
+                                                           
+  Explore GraphQL data at: http://localhost:8080/___explore
+```
+
+If you see that message, then you can visit http://localhost:8080/ to view the website.
