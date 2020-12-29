@@ -13,7 +13,7 @@ $ git clone https://github.com/MattJarman/portfolio.git
 
 ### 2. Set up the website
 ```
-$ cd ../portfolio
+$ cd portfolio
 $ npm i
 ```
 
@@ -21,7 +21,7 @@ $ npm i
 ```
 $ npm run develop
 ```
-If everything went well, you should see somethign similar to the following message:
+If everything went well, you should see something similar to the following message:
 ```
  DONE  Compiled successfully in 10ms  
 
