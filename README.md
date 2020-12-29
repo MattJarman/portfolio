@@ -6,7 +6,7 @@ This website was made using [Gridsome](https://gridsome.org/) and [TailwindCSS](
 
 To run this project, you'll need [Git](https://git-scm.com/downloads) and [Node.js](https://nodejs.org/en/).
 
-### 1. Clone the project and CMS
+### 1. Clone the project
 ```s
 $ git clone https://github.com/MattJarman/portfolio.git
 ```
