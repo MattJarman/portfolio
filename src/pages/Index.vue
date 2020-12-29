@@ -8,14 +8,14 @@
         </p>
         <g-link
             to="/portfolio"
-            class="w-24 px-4 py-2 font-bold text-center text-white shadow-md bg-green-500 hover:bg-green-600"
+            class="w-24 px-4 py-2 font-bold text-center text-white bg-green-500 shadow-md hover:bg-green-600"
         >
           Portfolio
         </g-link>
       </div>
       <div class="flex justify-center">
-        <span class="focus:outline-none cursor-pointer" @click="scrollTo('about')">
-          <font-awesome-icon class="outline-non text-green-500 text-6xl animate-bounce" :icon="['fa', 'angle-down']"/>
+        <span class="cursor-pointer focus:outline-none" @click="scrollTo('about')">
+          <font-awesome-icon class="text-6xl text-green-500 outline-non animate-bounce" :icon="['fa', 'angle-down']"/>
         </span>
       </div>
     </section>
@@ -40,10 +40,7 @@
                   class="text-green-400 no-underline hover:underline"
                   href="https://www.bangor.ac.uk/"
                   target="_blank"
-              >
-                Bangor University
-              </a>
-              , I began my current job as a Graduate Developer working
+              >Bangor University</a>, I began my current job as a Graduate Developer working
               on developing and maintaining APIs for our partners.
             </p>
           </div>
@@ -57,20 +54,20 @@
         </div>
       </div>
       <div class="flex justify-center">
-        <a class="focus:outline-none cursor-pointer" @click="scrollTo('skills')">
-          <font-awesome-icon class="outline-non text-green-500 text-6xl animate-bounce" :icon="['fa', 'angle-down']"/>
+        <a class="cursor-pointer focus:outline-none" @click="scrollTo('skills')">
+          <font-awesome-icon class="text-6xl text-green-500 outline-non animate-bounce" :icon="['fa', 'angle-down']"/>
         </a>
       </div>
     </section>
     <section id="skills" class="flex flex-col px-4 h-view">
-      <div class="container flex flex-col flex-grow mx-auto w-full lg:w-2/3 md:px-8">
+      <div class="container flex flex-col flex-grow w-full mx-auto lg:w-2/3 md:px-8">
         <div class="flex flex-col">
           <p class="flex items-center mt-4 mb-8 text-2xl font-bold whitespace-no-wrap heading md:text-3xl dark:text-green-400">
             Skills
           </p>
         </div>
         <div class="flex flex-col flex-grow lg:flex-row">
-          <div class="flex flex-grow flex-wrap justify-between">
+          <div class="flex flex-wrap justify-between flex-grow">
             <skill
                 v-for="skill in $page.skills.edges"
                 :key="skill.node.name"
@@ -82,8 +79,8 @@
         </div>
       </div>
       <div class="flex justify-center">
-        <span @click="scrollToTop" class="focus:outline-none cursor-pointer">
-          <font-awesome-icon class="outline-none text-green-500 text-6xl animate-bounce" :icon="['fa', 'angle-up']"/>
+        <span @click="scrollToTop" class="cursor-pointer focus:outline-none">
+          <font-awesome-icon class="text-6xl text-green-500 outline-none animate-bounce" :icon="['fa', 'angle-up']"/>
         </span>
       </div>
     </section>
