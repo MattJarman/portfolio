@@ -19,7 +19,7 @@
                 id="mobile-menu-button"
                 type="button"
                 @click="toggleMenu"
-                class="rounded-md p-2 inline-flex items-center justify-center text-gray-400 dark:text-gray-200 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-400">
+                class="rounded-md p-2 inline-flex items-center justify-center text-gray-400 dark:text-gray-200 hover:text-gray-500 hover:bg-gray-100 dark:hover:bg-prussian-blue focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-400">
               <span class="sr-only">Open menu</span>
               <svg
                   class="pointer-events-none h-6 w-6"
@@ -96,7 +96,7 @@
                 <nav class="grid gap-y-8">
                   <g-link
                       to="/"
-                      class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 text-gray-900 dark:text-gray-200"
+                      class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-prussian-blue text-gray-900 dark:text-gray-200"
                       exact-active-class="text-gray-100"
                       v-on:click.native="hideMenu"
                   >
@@ -110,7 +110,7 @@
 
                   <g-link
                       to="/portfolio"
-                      class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 text-gray-900 dark:text-gray-200"
+                      class="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-prussian-blue text-gray-900 dark:text-gray-200"
                       exact-active-class="text-gray-100"
                       v-on:click.native="hideMenu"
                   >
