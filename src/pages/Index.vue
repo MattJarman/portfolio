@@ -40,8 +40,7 @@
                   class="text-green-400 no-underline hover:underline"
                   href="https://www.bangor.ac.uk/"
                   target="_blank"
-              >Bangor University</a>, I began my current job as a Graduate Developer working
-              on developing and maintaining APIs for our partners.
+              >Bangor University</a>, I began my current job as a Software Developer, developing and maintaining APIs for our partners and implementing event-driven architecture into our services.
             </p>
           </div>
           <div class="flex items-center justify-center flex-grow w-full lg:ml-24">
